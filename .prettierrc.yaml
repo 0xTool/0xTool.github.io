@@ -1,0 +1,33 @@
+arrowParens: 'avoid'
+importOrder:
+  [
+    '^(react(/.+)?|react-dom(/.+)?)$',
+    '<THIRD_PARTY_MODULES>',
+    # 所有相對路徑非資源檔
+    '^(?<!assets)[./].+(?<!\.scss|\.css|\.json)$',
+    '^(assets|!!file-loader!assets)/(.*)$',
+    '^[./]',
+  ]
+importOrderParserPlugins: ['jsx', 'typescript']
+importOrderSeparation: true
+importOrderSortSpecifiers: true
+bracketSameLine: false
+bracketSpacing: true
+eslintIntegration: true
+jsxSingleQuote: false
+parser: 'typescript'
+semi: false
+singleQuote: true
+trailingComma: 'es5'
+options:
+  editorconfig: true
+plugins:
+
+overrides:
+  # Solidity style guide
+  # https://docs.soliditylang.org/en/v0.8.17/style-guide.html
+  - files: '*.sol'
+    options:
+      tabWidth: 4
+      singleQuote: false
+      printWidth: 120
